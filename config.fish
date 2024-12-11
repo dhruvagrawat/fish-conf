@@ -28,6 +28,7 @@ alias py='python3'
 alias up='sudo pacman -Syu'
 alias upy='yay -Syu'
 alias clean='yay -Yc'
+alias meow="showcat_random"
 
 
 #####################################
@@ -40,6 +41,19 @@ end
 function nvidia-settings
     mkdir -p $XDG_CONFIG_HOME/nvidia/
     command nvidia-settings --config="$XDG_CONFIG_HOME/nvidia/settings" $argv
+end
+## mycatfunct ##
+
+function showcat_random
+    # Fetch a random cat image URL from The Cat API
+    set cat_image_url (curl -s https://api.thecatapi.com/v1/images/search | jq -r '.[0].url')
+
+    # Download the image temporarily
+    set temp_image "/tmp/random_cat.jpg"
+    curl -s $cat_image_url -o $temp_image
+
+    # Display the image with icat
+    icat $temp_image
 end
 
 #####################################
@@ -64,4 +78,4 @@ pyenv init - | source
 #####################################
 ##==> Fun Stuff
 #####################################
-pokemon-colorscripts --no-title -s -r 1,3,6
+#pokemon-colorscripts --no-title -s -r 1,3,6
