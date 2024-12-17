@@ -30,6 +30,21 @@ alias upy='yay -Syu'
 alias clean='yay -Yc'
 alias meow="showcat_random"
 
+# Short aliases for setting brightness on second monitor (card 1)
+alias b0='ddcutil -d 1 setvcp 10 0'
+alias b1='ddcutil -d 1 setvcp 10 1'
+alias b10='ddcutil -d 1 setvcp 10 10'
+alias b20='ddcutil -d 1 setvcp 10 20'
+alias b30='ddcutil -d 1 setvcp 10 30'
+alias b40='ddcutil -d 1 setvcp 10 40'
+alias b50='ddcutil -d 1 setvcp 10 50'
+alias b60='ddcutil -d 1 setvcp 10 60'
+alias b70='ddcutil -d 1 setvcp 10 70'
+alias b80='ddcutil -d 1 setvcp 10 80'
+alias b90='ddcutil -d 1 setvcp 10 90'
+alias b100='ddcutil -d 1 setvcp 10 100'
+
+
 
 #####################################
 ##==> Custom Functions
